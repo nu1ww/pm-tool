@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::group(['prefix'=>'api/v1'],function(){
+
+    Route::resource('projects','ProjectsController');
+   // Route::resource('tags','TagsController',['only'=>['index','show']]);
+
+
+});
